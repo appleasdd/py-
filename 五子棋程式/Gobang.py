@@ -23,7 +23,7 @@ BLACK = [0, 0, 0]
 game_screen_color = [238, 154, 73]
 
 # 引入初始畫面的圖片
-background_image = pygame.image.load(os.path.join("background_image1-1.jpg")).convert()
+background_image = pygame.image.load(os.path.join("BackGround.png")).convert()
 # 調整圖片大小
 background_image = pygame.transform.scale(background_image, (900, 1181.25))
 # 載入棋子
@@ -59,9 +59,9 @@ def draw_text(surf, text, color, size, x, y):
 # 宣告可顯示初始畫面、下棋教學的函式
 def draw_init():
     # 畫出背景圖片
-    game_screen.blit(background_image, (-140, -260))
+    game_screen.blit(background_image, (-140, -240))
     # 顯示標題、遊戲教學
-    draw_text(game_screen, "五子棋", WHITE, 120, 670 / 2, 700 / 4 + 20)
+    draw_text(game_screen, "五子棋", BLACK, 120, 670 / 2, 700 / 4 + 20)
     draw_text(game_screen, "使用滑鼠選擇下棋位置", WHITE, 30, 670 / 2, 700 / 2 + 50)
     draw_text(game_screen, "點擊滑鼠左鍵下棋~", WHITE, 30, 670 / 2, 700 / 2 + 40 + 50)
     draw_text(game_screen, "按任意鍵可重新遊戲!", WHITE, 20, 670 / 2, 580)

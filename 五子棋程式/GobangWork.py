@@ -23,7 +23,7 @@ BLACK = [0, 0, 0]
 game_screen_color = [238, 154, 73]
 
 # 引入初始畫面的圖片
-background_image = pygame.image.load(os.path.join("")).convert()
+background_image = pygame.image.load(os.path.join("BackGround.png")).convert()
 # 調整圖片大小
 background_image = pygame.transform.scale(background_image, (900, 1181.25))
 # 載入棋子
@@ -100,7 +100,7 @@ def Check(x, y, played):
     if x >= 27 and x <= 643 and y >= 27 and y<= 643:
         for chess in played:
             # 如果鼠標的座標已有落子，則回傳False(無法落子)
-            if chess[0][0] == x and chess[0][1] == y:
+            if chess[0][0] == x-25 and chess[0][1] == y-25:
                 return False
         # 目前沒落子(可以落子)
         return True
